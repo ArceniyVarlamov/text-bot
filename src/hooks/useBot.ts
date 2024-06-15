@@ -25,7 +25,7 @@ export const useBot = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${process.env.REACT_APP_BOT_API_TOKEN}`,
+            "Authorization": `Bearer pat_YAW9GPtPqtnY167yjtnT0tebGDZXQ90J3xgVPWuzuq1zc8Qlz0yrPog6WQykfmuu`,
             'Connection': 'keep-alive',
             'Host': 'api.coze.com',
           }
