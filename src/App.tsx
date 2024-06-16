@@ -5,14 +5,6 @@ import HomePage from './pages/home';
 
 
 function App() {
-  useEffect(() => {
-
-    localStorage.setItem('userKey', '')
-    if (!localStorage.getItem('userKey')) {
-      localStorage.setItem('userKey', (Math.floor(Math.random() * (5000000000) + 2000000000)).toString())
-    }
-  }, [localStorage.getItem('userKey')]);
-  console.log(localStorage.getItem('userKey'));
   
   return (
     <BrowserRouter> 
