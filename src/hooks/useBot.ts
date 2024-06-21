@@ -19,7 +19,7 @@ export const useBot = () => {
           conversation_id: localStorage.getItem('userKey'), 
           bot_id: "7380252447664586757",
           user: localStorage.getItem('userKey'), 
-          query: `(${textData}) переделай текст внутри скобок в соответсвии со следующими пожеланиями: ${wantData}`, 
+          query: `${textData} - переделай текст в соответсвии со следующими пожеланиями: ${wantData}`, 
           stream: false
         }, 
         {
