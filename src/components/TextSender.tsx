@@ -3,7 +3,6 @@ import styles from "@/App.module.scss";
 import { useBot } from "@/hooks/useBot";
 import { useRate } from "@/hooks/useRate";
 import Header from "./layout/Header/Header";
-import EditableBlock from './UI/EditableBlock/EditableBlock';
 import DefaultText from "./UI/DefaultText/DefaultText";
 
 export default function TextSender() {
@@ -53,12 +52,24 @@ export default function TextSender() {
 
 	return (
 		<>
-			<Header/>
+			<Header />
 			<div className={styles.text}>
-				<DefaultText text='Введите текст:'/>
-				<EditableBlock ref={inputRef}/>
-				<DefaultText text='Ваши пожелания:'/>
-				<EditableBlock ref={wantRef}/>
+				<DefaultText text='Введите текст:' />
+				<div
+					content={inputValue ?? ''}
+					contentEditable='true'
+					className={styles.input}
+					ref={inputRef}
+					suppressContentEditableWarning={true}
+				/>
+				<DefaultText text='Ваши пожелания:' />
+				<div
+					content={wantValue ?? ''}
+					contentEditable='true'
+					className={styles.input}
+					ref={wantRef}
+					suppressContentEditableWarning={true}
+				/>
 				<button className={styles.button} onClick={clickGetHandler}>
 					Переделать текст
 				</button>
