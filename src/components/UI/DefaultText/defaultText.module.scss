@@ -1,0 +1,12 @@
+@import '@/assets/variables.scss';
+
+.final {
+  font-family: 'Berlin Sans FB Demi' !important;
+  width: 80%;
+  font-size: 24px;
+  font-weight: 600;
+  user-select: none;
+  color: $button-color;
+  -webkit-text-stroke: 0.2px $main-color;
+  opacity: 0.8;
+}

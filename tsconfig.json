@@ -19,10 +19,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": ["./node_modules/@types", "./src/types"]
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "src/**/*", // Предполагая, что ваши исходные файлы находятся в папке src
     "typings.d.ts" // Файл с объявлением типов SCSS модулей
-  ]
+, "global.d.ts"  ]
 }

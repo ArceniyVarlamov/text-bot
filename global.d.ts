@@ -1,13 +1,14 @@
-// scss.d.ts
 declare module '*.module.scss' {
   const classes: { [key: string]: string };
   export default classes;
 }
 
 declare module '*.png' {
-  export default classes;
+  const content: string;
+  export default content;
 }
 
 declare module '*.gif' {
-  export default classes;
+  const content: string;
+  export default content;
 }

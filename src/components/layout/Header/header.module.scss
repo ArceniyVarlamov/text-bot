@@ -1,0 +1,28 @@
+@import '@/assets/variables.scss';
+
+.header {
+	height: 60px;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	.id {
+		height: 30%;
+		cursor: default;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 5px 10px;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: 700;
+		border: 1px solid $id-border-color;
+		background-color: rgb(255, 255, 255);
+		color: $main-color;
+	}
+	.logo {
+		height: 90%;
+		user-select: none;
+	}
+}

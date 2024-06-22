@@ -1,0 +1,17 @@
+@import '@/assets/variables.scss';
+
+.input {
+  background-color: $background-input-color;
+  border: 2px $background-color solid;
+  width: 80%;
+  min-width: 15vw;
+  max-width: 90vw;
+  user-select: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: $black-color;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  word-break: keep-all;
+}
