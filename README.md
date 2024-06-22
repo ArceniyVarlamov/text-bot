@@ -1,1 +1,1 @@
-сайт: https://text-master-beta.vercel.app/
+сайт: https://text-bot-six.vercel.app/
