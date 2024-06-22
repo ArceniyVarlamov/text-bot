@@ -7,21 +7,21 @@ export const useBot = () => {
   const [error, setError] = useState<AxiosError | null | string>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const post = async (textData: string, wantData: string) => {
+  const post = async (textData: string, wantData: string | '') => {
     setLoading(true);
     setTextData(null);
     setError(null);
 
     try {
-      const queryLang = /[a-zA-Z]/.test(textData) ? 'английском' : 'русском'
+      const want = wantData ? ` в соответсвии с пожеланиями: ${wantData}` : ''
 
       const response = await axios.post(
         `https://api.coze.com/open_api/v2/chat`, 
         {
           conversation_id: localStorage.getItem('userKey'), 
-          bot_id: "7380252447664586757",
+          bot_id: "7383349524124827654",
           user: localStorage.getItem('userKey'), 
-          query: `переделай текст на ${queryLang} языке в соответсвии со следующими пожеланиями: ${wantData}.Текст: ${textData}`, 
+          query: `Перепиши текст на его же языке, текст должен иметь смысловую связь. Проверяй весь текст и следи за всеми чертами текста, который может быть написан ии, исключай их. В ответе выдай только переписанный текст${want}. Поставь приоритет на исключение символов "[]{}()" и других специальных символов и на замену слов внутри на логичную составляющую текста. Текст: ${textData}`, 
           stream: false
         }, 
         {
